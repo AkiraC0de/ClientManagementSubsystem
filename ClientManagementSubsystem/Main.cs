@@ -93,7 +93,9 @@ namespace ClientManagementSubsystem
 
         private void Main_Load(object sender, EventArgs e)
         {
-            
+            dashboardUserControl dashboardUserControl = new dashboardUserControl();
+            showControl(dashboardUserControl);
+            ActivateButton(dashboardBtn);
         }
 
     }
