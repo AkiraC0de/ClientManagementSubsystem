@@ -56,8 +56,12 @@ namespace ClientManagementSubsystem
         {
             if (sender is IconButton btn)
             {
-                btn.ForeColor = defaultColor;
-                btn.IconColor = defaultColor;
+                // ONLY reset to default if this button is NOT the currently active one
+                if (btn != currentBtn)
+                {
+                    btn.ForeColor = defaultColor;
+                    btn.IconColor = defaultColor;
+                }
             }
         }
 
