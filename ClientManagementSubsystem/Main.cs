@@ -97,6 +97,7 @@ namespace ClientManagementSubsystem
 
         private void Main_Load(object sender, EventArgs e)
         {
+            // this.WindowState = FormWindowState.Maximized;
             dashboardUserControl dashboardUserControl = new dashboardUserControl();
             showControl(dashboardUserControl);
             ActivateButton(dashboardBtn);
