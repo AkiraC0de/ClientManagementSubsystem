@@ -13,60 +13,32 @@ namespace ClientManagementSubsystem
 {
     public partial class Main : Form
     {
+        private ButtonSelection btnSelection;
+
         public Main()
         {
             InitializeComponent();
+
+            btnSelection = new ButtonSelection(
+                Color.FromArgb(255, 56, 189, 248),
+                Color.FromArgb(255, 230, 241, 247)
+            );
         }
 
-        // Buttons
-        private IconButton currentBtn;
-        private Color hoverColor = Color.FromArgb(255, 56, 189, 248);
-        private Color defaultColor = Color.FromArgb(255, 230, 241, 247);
-
-        private void ActivateButton(object senderBtn)
+        private void Main_Load(object sender, EventArgs e)
         {
-            if (senderBtn != null)
-            {
-                DisableButton();
-            }
-            currentBtn = (IconButton)senderBtn;
-            currentBtn.ForeColor = hoverColor;
-            currentBtn.IconColor = hoverColor;
+            btnSelection.RegisterButton(dashboardBtn, dashboardSelected);
+            btnSelection.RegisterButton(bookingsBtn, bookingsSelected);
+            btnSelection.RegisterButton(outboundBtn, outboundSelected);
+            btnSelection.RegisterButton(inboundBtn, inboundSelected);
+            btnSelection.RegisterButton(damagesBtn, damagesSelected);
+            btnSelection.RegisterButton(personalBtn, personalSelected);
+
+            showControl(new dashboardUserControl());
+            btnSelection.ActivateButton(dashboardBtn);
         }
 
-        private void DisableButton()
-        {
-            if (currentBtn != null)
-            {
-                currentBtn.ForeColor = defaultColor;
-                currentBtn.IconColor = defaultColor;
-            }
-        }
-
-        private void OnButtonMouseEnter(object sender, EventArgs e)
-        {
-            if (sender is IconButton btn)
-            {
-                btn.ForeColor = hoverColor;
-                btn.IconColor = hoverColor;
-            }
-        }
-
-        private void OnButtonMouseLeave(object sender, EventArgs e)
-        {
-            if (sender is IconButton btn)
-            {
-                // ONLY reset to default if this button is NOT the currently active one
-                if (btn != currentBtn)
-                {
-                    btn.ForeColor = defaultColor;
-                    btn.IconColor = defaultColor;
-                }
-            }
-        }
-
-
-        // Methods to display the selected user control in the container panel   
+        // Logic for loading User Controls
         private void showControl(Control addevent)
         {
             containerPanel.Controls.Clear();
@@ -74,34 +46,36 @@ namespace ClientManagementSubsystem
             containerPanel.Controls.Add(addevent);
         }
 
+        // Button click events
+
         private void dashboardBtn_Click(object sender, EventArgs e)
         {
-            dashboardUserControl uc = new dashboardUserControl();
-            showControl(uc);
-            ActivateButton(sender);
+            showControl(new dashboardUserControl());
+            btnSelection.ActivateButton(sender);
         }
 
         private void bookingsBtn_Click(object sender, EventArgs e)
         {
-            bookingsUserControl uc = new bookingsUserControl();
-            showControl(uc);
-            ActivateButton(sender);
+            showControl(new bookingsUserControl());
+            btnSelection.ActivateButton(sender);
         }
 
         private void personalBtn_Click(object sender, EventArgs e)
         {
-            personalUserControl uc = new personalUserControl();
-            showControl(uc);
-            ActivateButton(sender);
+            showControl(new personalUserControl());
+            btnSelection.ActivateButton(sender);
         }
 
-        private void Main_Load(object sender, EventArgs e)
+        // Mouse Events
+
+        private void OnButtonMouseEnter(object sender, EventArgs e)
         {
-            // this.WindowState = FormWindowState.Maximized;
-            dashboardUserControl dashboardUserControl = new dashboardUserControl();
-            showControl(dashboardUserControl);
-            ActivateButton(dashboardBtn);
+            btnSelection.OnMouseEnter(sender);
         }
 
+        private void OnButtonMouseLeave(object sender, EventArgs e)
+        {
+            btnSelection.OnMouseLeave(sender);
+        }
     }
 }

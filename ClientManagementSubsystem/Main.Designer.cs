@@ -29,16 +29,24 @@
         private void InitializeComponent()
         {
             this.containerPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.dashboardSelected = new Guna.UI2.WinForms.Guna2Shapes();
             this.headerPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.statusLabel = new System.Windows.Forms.Label();
+            this.activityLabel = new System.Windows.Forms.Label();
             this.dashboardBtn = new FontAwesome.Sharp.IconButton();
             this.bookingsBtn = new FontAwesome.Sharp.IconButton();
             this.personalBtn = new FontAwesome.Sharp.IconButton();
             this.logoutBtn = new FontAwesome.Sharp.IconButton();
             this.sidebarPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.personalSelected = new Guna.UI2.WinForms.Guna2Shapes();
+            this.damagesSelected = new Guna.UI2.WinForms.Guna2Shapes();
+            this.inboundSelected = new Guna.UI2.WinForms.Guna2Shapes();
+            this.outboundSelected = new Guna.UI2.WinForms.Guna2Shapes();
+            this.bookingsSelected = new Guna.UI2.WinForms.Guna2Shapes();
+            this.outboundBtn = new FontAwesome.Sharp.IconButton();
+            this.damagesBtn = new FontAwesome.Sharp.IconButton();
+            this.inboundBtn = new FontAwesome.Sharp.IconButton();
             this.layoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.headerPanel.SuspendLayout();
             this.sidebarPanel.SuspendLayout();
             this.layoutPanel.SuspendLayout();
@@ -57,12 +65,27 @@
             this.containerPanel.Size = new System.Drawing.Size(1622, 943);
             this.containerPanel.TabIndex = 2;
             // 
+            // dashboardSelected
+            // 
+            this.dashboardSelected.BorderThickness = 0;
+            this.dashboardSelected.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(189)))), ((int)(((byte)(248)))));
+            this.dashboardSelected.Location = new System.Drawing.Point(251, 104);
+            this.dashboardSelected.Margin = new System.Windows.Forms.Padding(0);
+            this.dashboardSelected.Name = "dashboardSelected";
+            this.dashboardSelected.PolygonSkip = 1;
+            this.dashboardSelected.Rotate = 0F;
+            this.dashboardSelected.Shape = Guna.UI2.WinForms.Enums.ShapeType.Rectangle;
+            this.dashboardSelected.Size = new System.Drawing.Size(12, 71);
+            this.dashboardSelected.TabIndex = 0;
+            this.dashboardSelected.Text = "guna2Shapes1";
+            this.dashboardSelected.Zoom = 80;
+            // 
             // headerPanel
             // 
             this.headerPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
             this.headerPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(76)))), ((int)(((byte)(117)))));
             this.headerPanel.BorderThickness = 5;
-            this.headerPanel.Controls.Add(this.statusLabel);
+            this.headerPanel.Controls.Add(this.activityLabel);
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.headerPanel.Location = new System.Drawing.Point(0, 0);
             this.headerPanel.Margin = new System.Windows.Forms.Padding(0);
@@ -70,15 +93,15 @@
             this.headerPanel.Size = new System.Drawing.Size(1632, 82);
             this.headerPanel.TabIndex = 3;
             // 
-            // statusLabel
+            // activityLabel
             // 
-            this.statusLabel.AutoSize = true;
-            this.statusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusLabel.Location = new System.Drawing.Point(19, 26);
-            this.statusLabel.Name = "statusLabel";
-            this.statusLabel.Size = new System.Drawing.Size(147, 31);
-            this.statusLabel.TabIndex = 0;
-            this.statusLabel.Text = "Dashboard";
+            this.activityLabel.AutoSize = true;
+            this.activityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.activityLabel.Location = new System.Drawing.Point(19, 26);
+            this.activityLabel.Name = "activityLabel";
+            this.activityLabel.Size = new System.Drawing.Size(147, 31);
+            this.activityLabel.TabIndex = 0;
+            this.activityLabel.Text = "Dashboard";
             // 
             // dashboardBtn
             // 
@@ -152,12 +175,12 @@
             this.personalBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
             this.personalBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.personalBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.personalBtn.Location = new System.Drawing.Point(9, 335);
+            this.personalBtn.Location = new System.Drawing.Point(9, 488);
             this.personalBtn.Margin = new System.Windows.Forms.Padding(0);
             this.personalBtn.Name = "personalBtn";
             this.personalBtn.Size = new System.Drawing.Size(248, 71);
             this.personalBtn.TabIndex = 3;
-            this.personalBtn.Text = "Agent Stats";
+            this.personalBtn.Text = "Agent History";
             this.personalBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.personalBtn.UseVisualStyleBackColor = false;
             this.personalBtn.Click += new System.EventHandler(this.personalBtn_Click);
@@ -194,7 +217,15 @@
             // sidebarPanel
             // 
             this.sidebarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(76)))), ((int)(((byte)(117)))));
-            this.sidebarPanel.Controls.Add(this.iconButton1);
+            this.sidebarPanel.Controls.Add(this.personalSelected);
+            this.sidebarPanel.Controls.Add(this.damagesSelected);
+            this.sidebarPanel.Controls.Add(this.inboundSelected);
+            this.sidebarPanel.Controls.Add(this.outboundSelected);
+            this.sidebarPanel.Controls.Add(this.bookingsSelected);
+            this.sidebarPanel.Controls.Add(this.dashboardSelected);
+            this.sidebarPanel.Controls.Add(this.outboundBtn);
+            this.sidebarPanel.Controls.Add(this.damagesBtn);
+            this.sidebarPanel.Controls.Add(this.inboundBtn);
             this.sidebarPanel.Controls.Add(this.logoutBtn);
             this.sidebarPanel.Controls.Add(this.personalBtn);
             this.sidebarPanel.Controls.Add(this.bookingsBtn);
@@ -204,6 +235,156 @@
             this.sidebarPanel.Name = "sidebarPanel";
             this.sidebarPanel.Size = new System.Drawing.Size(260, 1035);
             this.sidebarPanel.TabIndex = 1;
+            // 
+            // personalSelected
+            // 
+            this.personalSelected.BorderThickness = 0;
+            this.personalSelected.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(189)))), ((int)(((byte)(248)))));
+            this.personalSelected.Location = new System.Drawing.Point(251, 488);
+            this.personalSelected.Margin = new System.Windows.Forms.Padding(0);
+            this.personalSelected.Name = "personalSelected";
+            this.personalSelected.PolygonSkip = 1;
+            this.personalSelected.Rotate = 0F;
+            this.personalSelected.Shape = Guna.UI2.WinForms.Enums.ShapeType.Rectangle;
+            this.personalSelected.Size = new System.Drawing.Size(12, 71);
+            this.personalSelected.TabIndex = 11;
+            this.personalSelected.Text = "guna2Shapes5";
+            this.personalSelected.Zoom = 80;
+            // 
+            // damagesSelected
+            // 
+            this.damagesSelected.BorderThickness = 0;
+            this.damagesSelected.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(189)))), ((int)(((byte)(248)))));
+            this.damagesSelected.Location = new System.Drawing.Point(251, 411);
+            this.damagesSelected.Margin = new System.Windows.Forms.Padding(0);
+            this.damagesSelected.Name = "damagesSelected";
+            this.damagesSelected.PolygonSkip = 1;
+            this.damagesSelected.Rotate = 0F;
+            this.damagesSelected.Shape = Guna.UI2.WinForms.Enums.ShapeType.Rectangle;
+            this.damagesSelected.Size = new System.Drawing.Size(12, 71);
+            this.damagesSelected.TabIndex = 10;
+            this.damagesSelected.Text = "guna2Shapes4";
+            this.damagesSelected.Zoom = 80;
+            // 
+            // inboundSelected
+            // 
+            this.inboundSelected.BorderThickness = 0;
+            this.inboundSelected.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(189)))), ((int)(((byte)(248)))));
+            this.inboundSelected.Location = new System.Drawing.Point(251, 334);
+            this.inboundSelected.Margin = new System.Windows.Forms.Padding(0);
+            this.inboundSelected.Name = "inboundSelected";
+            this.inboundSelected.PolygonSkip = 1;
+            this.inboundSelected.Rotate = 0F;
+            this.inboundSelected.Shape = Guna.UI2.WinForms.Enums.ShapeType.Rectangle;
+            this.inboundSelected.Size = new System.Drawing.Size(12, 71);
+            this.inboundSelected.TabIndex = 9;
+            this.inboundSelected.Text = "guna2Shapes3";
+            this.inboundSelected.Zoom = 80;
+            // 
+            // outboundSelected
+            // 
+            this.outboundSelected.BorderThickness = 0;
+            this.outboundSelected.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(189)))), ((int)(((byte)(248)))));
+            this.outboundSelected.Location = new System.Drawing.Point(251, 257);
+            this.outboundSelected.Margin = new System.Windows.Forms.Padding(0);
+            this.outboundSelected.Name = "outboundSelected";
+            this.outboundSelected.PolygonSkip = 1;
+            this.outboundSelected.Rotate = 0F;
+            this.outboundSelected.Shape = Guna.UI2.WinForms.Enums.ShapeType.Rectangle;
+            this.outboundSelected.Size = new System.Drawing.Size(12, 71);
+            this.outboundSelected.TabIndex = 8;
+            this.outboundSelected.Text = "guna2Shapes2";
+            this.outboundSelected.Zoom = 80;
+            // 
+            // bookingsSelected
+            // 
+            this.bookingsSelected.BorderThickness = 0;
+            this.bookingsSelected.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(189)))), ((int)(((byte)(248)))));
+            this.bookingsSelected.Location = new System.Drawing.Point(251, 181);
+            this.bookingsSelected.Margin = new System.Windows.Forms.Padding(0);
+            this.bookingsSelected.Name = "bookingsSelected";
+            this.bookingsSelected.PolygonSkip = 1;
+            this.bookingsSelected.Rotate = 0F;
+            this.bookingsSelected.Shape = Guna.UI2.WinForms.Enums.ShapeType.Rectangle;
+            this.bookingsSelected.Size = new System.Drawing.Size(12, 71);
+            this.bookingsSelected.TabIndex = 7;
+            this.bookingsSelected.Text = "guna2Shapes1";
+            this.bookingsSelected.Zoom = 80;
+            // 
+            // outboundBtn
+            // 
+            this.outboundBtn.BackColor = System.Drawing.Color.Transparent;
+            this.outboundBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.outboundBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.outboundBtn.FlatAppearance.BorderSize = 0;
+            this.outboundBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.outboundBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.outboundBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.outboundBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.outboundBtn.Font = new System.Drawing.Font("Cascadia Code", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outboundBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
+            this.outboundBtn.IconChar = FontAwesome.Sharp.IconChar.Key;
+            this.outboundBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
+            this.outboundBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.outboundBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.outboundBtn.Location = new System.Drawing.Point(9, 257);
+            this.outboundBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.outboundBtn.Name = "outboundBtn";
+            this.outboundBtn.Size = new System.Drawing.Size(248, 71);
+            this.outboundBtn.TabIndex = 6;
+            this.outboundBtn.Text = "Outbound";
+            this.outboundBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.outboundBtn.UseVisualStyleBackColor = false;
+            // 
+            // damagesBtn
+            // 
+            this.damagesBtn.BackColor = System.Drawing.Color.Transparent;
+            this.damagesBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.damagesBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.damagesBtn.FlatAppearance.BorderSize = 0;
+            this.damagesBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.damagesBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.damagesBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.damagesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.damagesBtn.Font = new System.Drawing.Font("Cascadia Code", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.damagesBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
+            this.damagesBtn.IconChar = FontAwesome.Sharp.IconChar.ExclamationTriangle;
+            this.damagesBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
+            this.damagesBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.damagesBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.damagesBtn.Location = new System.Drawing.Point(9, 411);
+            this.damagesBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.damagesBtn.Name = "damagesBtn";
+            this.damagesBtn.Size = new System.Drawing.Size(248, 71);
+            this.damagesBtn.TabIndex = 5;
+            this.damagesBtn.Text = "Damages";
+            this.damagesBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.damagesBtn.UseVisualStyleBackColor = false;
+            // 
+            // inboundBtn
+            // 
+            this.inboundBtn.BackColor = System.Drawing.Color.Transparent;
+            this.inboundBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.inboundBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.inboundBtn.FlatAppearance.BorderSize = 0;
+            this.inboundBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.inboundBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.inboundBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.inboundBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.inboundBtn.Font = new System.Drawing.Font("Cascadia Code", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inboundBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
+            this.inboundBtn.IconChar = FontAwesome.Sharp.IconChar.CarAlt;
+            this.inboundBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
+            this.inboundBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.inboundBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.inboundBtn.Location = new System.Drawing.Point(9, 334);
+            this.inboundBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.inboundBtn.Name = "inboundBtn";
+            this.inboundBtn.Size = new System.Drawing.Size(248, 71);
+            this.inboundBtn.TabIndex = 4;
+            this.inboundBtn.Text = "Inbound";
+            this.inboundBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.inboundBtn.UseVisualStyleBackColor = false;
             // 
             // layoutPanel
             // 
@@ -235,31 +416,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1632, 1035);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.Transparent;
-            this.iconButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.iconButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.iconButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Cascadia Code", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.CarAlt;
-            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(9, 258);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(248, 71);
-            this.iconButton1.TabIndex = 4;
-            this.iconButton1.Text = "Unit Inspection";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -284,7 +440,7 @@
         #endregion
         private Guna.UI2.WinForms.Guna2Panel containerPanel;
         private Guna.UI2.WinForms.Guna2Panel headerPanel;
-        private System.Windows.Forms.Label statusLabel;
+        private System.Windows.Forms.Label activityLabel;
         private FontAwesome.Sharp.IconButton dashboardBtn;
         private FontAwesome.Sharp.IconButton bookingsBtn;
         private FontAwesome.Sharp.IconButton personalBtn;
@@ -292,7 +448,15 @@
         private Guna.UI2.WinForms.Guna2Panel sidebarPanel;
         private System.Windows.Forms.TableLayoutPanel layoutPanel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton inboundBtn;
+        private FontAwesome.Sharp.IconButton damagesBtn;
+        private FontAwesome.Sharp.IconButton outboundBtn;
+        private Guna.UI2.WinForms.Guna2Shapes dashboardSelected;
+        private Guna.UI2.WinForms.Guna2Shapes personalSelected;
+        private Guna.UI2.WinForms.Guna2Shapes damagesSelected;
+        private Guna.UI2.WinForms.Guna2Shapes inboundSelected;
+        private Guna.UI2.WinForms.Guna2Shapes outboundSelected;
+        private Guna.UI2.WinForms.Guna2Shapes bookingsSelected;
     }
 }
 
