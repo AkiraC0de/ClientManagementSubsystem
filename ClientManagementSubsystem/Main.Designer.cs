@@ -69,16 +69,16 @@
             // 
             this.dashboardSelected.BorderThickness = 0;
             this.dashboardSelected.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(189)))), ((int)(((byte)(248)))));
-            this.dashboardSelected.Location = new System.Drawing.Point(251, 104);
+            this.dashboardSelected.Location = new System.Drawing.Point(-3, 104);
             this.dashboardSelected.Margin = new System.Windows.Forms.Padding(0);
             this.dashboardSelected.Name = "dashboardSelected";
             this.dashboardSelected.PolygonSkip = 1;
             this.dashboardSelected.Rotate = 0F;
             this.dashboardSelected.Shape = Guna.UI2.WinForms.Enums.ShapeType.Rectangle;
-            this.dashboardSelected.Size = new System.Drawing.Size(12, 71);
+            this.dashboardSelected.Size = new System.Drawing.Size(10, 71);
             this.dashboardSelected.TabIndex = 0;
             this.dashboardSelected.Text = "guna2Shapes1";
-            this.dashboardSelected.Zoom = 80;
+            this.dashboardSelected.Zoom = 100;
             // 
             // headerPanel
             // 
@@ -96,10 +96,11 @@
             // activityLabel
             // 
             this.activityLabel.AutoSize = true;
-            this.activityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.activityLabel.Location = new System.Drawing.Point(19, 26);
+            this.activityLabel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.activityLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(76)))), ((int)(((byte)(117)))));
+            this.activityLabel.Location = new System.Drawing.Point(19, 23);
             this.activityLabel.Name = "activityLabel";
-            this.activityLabel.Size = new System.Drawing.Size(147, 31);
+            this.activityLabel.Size = new System.Drawing.Size(147, 37);
             this.activityLabel.TabIndex = 0;
             this.activityLabel.Text = "Dashboard";
             // 
@@ -119,7 +120,7 @@
             this.dashboardBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
             this.dashboardBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.dashboardBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dashboardBtn.Location = new System.Drawing.Point(9, 104);
+            this.dashboardBtn.Location = new System.Drawing.Point(18, 104);
             this.dashboardBtn.Margin = new System.Windows.Forms.Padding(0);
             this.dashboardBtn.Name = "dashboardBtn";
             this.dashboardBtn.Size = new System.Drawing.Size(248, 71);
@@ -147,7 +148,7 @@
             this.bookingsBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
             this.bookingsBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.bookingsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bookingsBtn.Location = new System.Drawing.Point(9, 181);
+            this.bookingsBtn.Location = new System.Drawing.Point(18, 181);
             this.bookingsBtn.Margin = new System.Windows.Forms.Padding(0);
             this.bookingsBtn.Name = "bookingsBtn";
             this.bookingsBtn.Size = new System.Drawing.Size(248, 71);
@@ -175,7 +176,7 @@
             this.personalBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
             this.personalBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.personalBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.personalBtn.Location = new System.Drawing.Point(9, 488);
+            this.personalBtn.Location = new System.Drawing.Point(18, 488);
             this.personalBtn.Margin = new System.Windows.Forms.Padding(0);
             this.personalBtn.Name = "personalBtn";
             this.personalBtn.Size = new System.Drawing.Size(248, 71);
@@ -240,76 +241,76 @@
             // 
             this.personalSelected.BorderThickness = 0;
             this.personalSelected.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(189)))), ((int)(((byte)(248)))));
-            this.personalSelected.Location = new System.Drawing.Point(251, 488);
+            this.personalSelected.Location = new System.Drawing.Point(-3, 488);
             this.personalSelected.Margin = new System.Windows.Forms.Padding(0);
             this.personalSelected.Name = "personalSelected";
             this.personalSelected.PolygonSkip = 1;
             this.personalSelected.Rotate = 0F;
             this.personalSelected.Shape = Guna.UI2.WinForms.Enums.ShapeType.Rectangle;
-            this.personalSelected.Size = new System.Drawing.Size(12, 71);
+            this.personalSelected.Size = new System.Drawing.Size(10, 71);
             this.personalSelected.TabIndex = 11;
             this.personalSelected.Text = "guna2Shapes5";
-            this.personalSelected.Zoom = 80;
+            this.personalSelected.Zoom = 100;
             // 
             // damagesSelected
             // 
             this.damagesSelected.BorderThickness = 0;
             this.damagesSelected.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(189)))), ((int)(((byte)(248)))));
-            this.damagesSelected.Location = new System.Drawing.Point(251, 411);
+            this.damagesSelected.Location = new System.Drawing.Point(-3, 411);
             this.damagesSelected.Margin = new System.Windows.Forms.Padding(0);
             this.damagesSelected.Name = "damagesSelected";
             this.damagesSelected.PolygonSkip = 1;
             this.damagesSelected.Rotate = 0F;
             this.damagesSelected.Shape = Guna.UI2.WinForms.Enums.ShapeType.Rectangle;
-            this.damagesSelected.Size = new System.Drawing.Size(12, 71);
+            this.damagesSelected.Size = new System.Drawing.Size(10, 71);
             this.damagesSelected.TabIndex = 10;
             this.damagesSelected.Text = "guna2Shapes4";
-            this.damagesSelected.Zoom = 80;
+            this.damagesSelected.Zoom = 100;
             // 
             // inboundSelected
             // 
             this.inboundSelected.BorderThickness = 0;
             this.inboundSelected.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(189)))), ((int)(((byte)(248)))));
-            this.inboundSelected.Location = new System.Drawing.Point(251, 334);
+            this.inboundSelected.Location = new System.Drawing.Point(-3, 334);
             this.inboundSelected.Margin = new System.Windows.Forms.Padding(0);
             this.inboundSelected.Name = "inboundSelected";
             this.inboundSelected.PolygonSkip = 1;
             this.inboundSelected.Rotate = 0F;
             this.inboundSelected.Shape = Guna.UI2.WinForms.Enums.ShapeType.Rectangle;
-            this.inboundSelected.Size = new System.Drawing.Size(12, 71);
+            this.inboundSelected.Size = new System.Drawing.Size(10, 71);
             this.inboundSelected.TabIndex = 9;
             this.inboundSelected.Text = "guna2Shapes3";
-            this.inboundSelected.Zoom = 80;
+            this.inboundSelected.Zoom = 100;
             // 
             // outboundSelected
             // 
             this.outboundSelected.BorderThickness = 0;
             this.outboundSelected.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(189)))), ((int)(((byte)(248)))));
-            this.outboundSelected.Location = new System.Drawing.Point(251, 257);
+            this.outboundSelected.Location = new System.Drawing.Point(-3, 257);
             this.outboundSelected.Margin = new System.Windows.Forms.Padding(0);
             this.outboundSelected.Name = "outboundSelected";
             this.outboundSelected.PolygonSkip = 1;
             this.outboundSelected.Rotate = 0F;
             this.outboundSelected.Shape = Guna.UI2.WinForms.Enums.ShapeType.Rectangle;
-            this.outboundSelected.Size = new System.Drawing.Size(12, 71);
+            this.outboundSelected.Size = new System.Drawing.Size(10, 71);
             this.outboundSelected.TabIndex = 8;
             this.outboundSelected.Text = "guna2Shapes2";
-            this.outboundSelected.Zoom = 80;
+            this.outboundSelected.Zoom = 100;
             // 
             // bookingsSelected
             // 
             this.bookingsSelected.BorderThickness = 0;
             this.bookingsSelected.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(189)))), ((int)(((byte)(248)))));
-            this.bookingsSelected.Location = new System.Drawing.Point(251, 181);
+            this.bookingsSelected.Location = new System.Drawing.Point(-3, 181);
             this.bookingsSelected.Margin = new System.Windows.Forms.Padding(0);
             this.bookingsSelected.Name = "bookingsSelected";
             this.bookingsSelected.PolygonSkip = 1;
             this.bookingsSelected.Rotate = 0F;
             this.bookingsSelected.Shape = Guna.UI2.WinForms.Enums.ShapeType.Rectangle;
-            this.bookingsSelected.Size = new System.Drawing.Size(12, 71);
+            this.bookingsSelected.Size = new System.Drawing.Size(10, 71);
             this.bookingsSelected.TabIndex = 7;
             this.bookingsSelected.Text = "guna2Shapes1";
-            this.bookingsSelected.Zoom = 80;
+            this.bookingsSelected.Zoom = 100;
             // 
             // outboundBtn
             // 
@@ -327,7 +328,7 @@
             this.outboundBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
             this.outboundBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.outboundBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.outboundBtn.Location = new System.Drawing.Point(9, 257);
+            this.outboundBtn.Location = new System.Drawing.Point(18, 257);
             this.outboundBtn.Margin = new System.Windows.Forms.Padding(0);
             this.outboundBtn.Name = "outboundBtn";
             this.outboundBtn.Size = new System.Drawing.Size(248, 71);
@@ -355,7 +356,7 @@
             this.damagesBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
             this.damagesBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.damagesBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.damagesBtn.Location = new System.Drawing.Point(9, 411);
+            this.damagesBtn.Location = new System.Drawing.Point(18, 411);
             this.damagesBtn.Margin = new System.Windows.Forms.Padding(0);
             this.damagesBtn.Name = "damagesBtn";
             this.damagesBtn.Size = new System.Drawing.Size(248, 71);
@@ -383,7 +384,7 @@
             this.inboundBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
             this.inboundBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.inboundBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.inboundBtn.Location = new System.Drawing.Point(9, 334);
+            this.inboundBtn.Location = new System.Drawing.Point(18, 334);
             this.inboundBtn.Margin = new System.Windows.Forms.Padding(0);
             this.inboundBtn.Name = "inboundBtn";
             this.inboundBtn.Size = new System.Drawing.Size(248, 71);
