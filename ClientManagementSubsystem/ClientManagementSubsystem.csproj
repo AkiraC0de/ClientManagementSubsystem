@@ -60,6 +60,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="classes\ButtonSelection.cs" />
+    <Compile Include="userControls\BookingCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControls\BookingCard.Designer.cs">
+      <DependentUpon>BookingCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="userControls\outboundUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -104,14 +110,26 @@
     <Compile Include="userControls\inboundUserControl.Designer.cs">
       <DependentUpon>inboundUserControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="userControls\BookingCard.resx">
+      <DependentUpon>BookingCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="userControls\bookingsUserControl.resx">
       <DependentUpon>bookingsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControls\damagesUserControl.resx">
+      <DependentUpon>damagesUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userControls\dashboardUserControl.resx">
       <DependentUpon>dashboardUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControls\inboundUserControl.resx">
+      <DependentUpon>inboundUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControls\outboundUserControl.resx">
+      <DependentUpon>outboundUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userControls\personalUserControl.resx">
       <DependentUpon>personalUserControl.cs</DependentUpon>

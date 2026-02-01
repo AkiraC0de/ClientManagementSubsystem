@@ -335,6 +335,9 @@
             this.outboundBtn.Text = "Outbound";
             this.outboundBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.outboundBtn.UseVisualStyleBackColor = false;
+            this.outboundBtn.Click += new System.EventHandler(this.outboundBtn_Click);
+            this.outboundBtn.MouseEnter += new System.EventHandler(this.OnButtonMouseEnter);
+            this.outboundBtn.MouseLeave += new System.EventHandler(this.OnButtonMouseLeave);
             // 
             // damagesBtn
             // 
@@ -360,6 +363,9 @@
             this.damagesBtn.Text = "Damages";
             this.damagesBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.damagesBtn.UseVisualStyleBackColor = false;
+            this.damagesBtn.Click += new System.EventHandler(this.damagesBtn_Click);
+            this.damagesBtn.MouseEnter += new System.EventHandler(this.OnButtonMouseEnter);
+            this.damagesBtn.MouseLeave += new System.EventHandler(this.OnButtonMouseLeave);
             // 
             // inboundBtn
             // 
@@ -385,6 +391,9 @@
             this.inboundBtn.Text = "Inbound";
             this.inboundBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.inboundBtn.UseVisualStyleBackColor = false;
+            this.inboundBtn.Click += new System.EventHandler(this.inboundBtn_Click);
+            this.inboundBtn.MouseEnter += new System.EventHandler(this.OnButtonMouseEnter);
+            this.inboundBtn.MouseLeave += new System.EventHandler(this.OnButtonMouseLeave);
             // 
             // layoutPanel
             // 

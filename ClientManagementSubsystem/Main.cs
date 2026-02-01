@@ -1,4 +1,5 @@
-﻿using FontAwesome.Sharp;
+﻿using ClientManagementSubsystem.userControls;
+using FontAwesome.Sharp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -52,18 +53,42 @@ namespace ClientManagementSubsystem
         {
             showControl(new dashboardUserControl());
             btnSelection.ActivateButton(sender);
+            activityLabel.Text = "Dashboard";
         }
 
         private void bookingsBtn_Click(object sender, EventArgs e)
         {
             showControl(new bookingsUserControl());
             btnSelection.ActivateButton(sender);
+            activityLabel.Text = "Bookings";
         }
 
         private void personalBtn_Click(object sender, EventArgs e)
         {
             showControl(new personalUserControl());
             btnSelection.ActivateButton(sender);
+            activityLabel.Text = "Personal Details";
+        }
+
+        private void outboundBtn_Click(object sender, EventArgs e)
+        {
+            showControl(new outboundUserControl());
+            btnSelection.ActivateButton(sender);
+            activityLabel.Text = "Outbound Vehicles";
+        }
+
+        private void inboundBtn_Click(object sender, EventArgs e)
+        {
+            showControl(new inboundUserControl());
+            btnSelection.ActivateButton(sender);
+            activityLabel.Text = "Inbound Vehicles";
+        }
+
+        private void damagesBtn_Click(object sender, EventArgs e)
+        {
+            showControl(new damagesUserControl());
+            btnSelection.ActivateButton(sender);
+            activityLabel.Text = "Damages Report";
         }
 
         // Mouse Events
