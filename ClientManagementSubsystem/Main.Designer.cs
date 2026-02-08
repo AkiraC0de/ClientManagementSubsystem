@@ -85,6 +85,7 @@
             this.headerPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
             this.headerPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(76)))), ((int)(((byte)(117)))));
             this.headerPanel.BorderThickness = 5;
+            this.headerPanel.Controls.Add(this.logoutBtn);
             this.headerPanel.Controls.Add(this.activityLabel);
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.headerPanel.Location = new System.Drawing.Point(0, 0);
@@ -96,11 +97,12 @@
             // activityLabel
             // 
             this.activityLabel.AutoSize = true;
-            this.activityLabel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.activityLabel.BackColor = System.Drawing.Color.Transparent;
+            this.activityLabel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.activityLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(76)))), ((int)(((byte)(117)))));
             this.activityLabel.Location = new System.Drawing.Point(19, 23);
             this.activityLabel.Name = "activityLabel";
-            this.activityLabel.Size = new System.Drawing.Size(147, 37);
+            this.activityLabel.Size = new System.Drawing.Size(157, 37);
             this.activityLabel.TabIndex = 0;
             this.activityLabel.Text = "Dashboard";
             // 
@@ -193,27 +195,26 @@
             this.logoutBtn.BackColor = System.Drawing.Color.Transparent;
             this.logoutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.logoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logoutBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.logoutBtn.Dock = System.Windows.Forms.DockStyle.Right;
             this.logoutBtn.FlatAppearance.BorderSize = 0;
             this.logoutBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.logoutBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
-            this.logoutBtn.IconChar = FontAwesome.Sharp.IconChar.SignOut;
-            this.logoutBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(241)))), ((int)(((byte)(247)))));
+            this.logoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(76)))), ((int)(((byte)(117)))));
+            this.logoutBtn.IconChar = FontAwesome.Sharp.IconChar.UserCircle;
+            this.logoutBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(76)))), ((int)(((byte)(117)))));
             this.logoutBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.logoutBtn.IconSize = 30;
-            this.logoutBtn.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.logoutBtn.Location = new System.Drawing.Point(0, 993);
+            this.logoutBtn.IconSize = 60;
+            this.logoutBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logoutBtn.Location = new System.Drawing.Point(1343, 0);
             this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.Size = new System.Drawing.Size(260, 42);
+            this.logoutBtn.Size = new System.Drawing.Size(289, 82);
             this.logoutBtn.TabIndex = 1;
-            this.logoutBtn.Text = "Log out";
+            this.logoutBtn.Text = "Agent Name";
             this.logoutBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.logoutBtn.UseVisualStyleBackColor = false;
-            this.logoutBtn.MouseEnter += new System.EventHandler(this.OnButtonMouseEnter);
-            this.logoutBtn.MouseLeave += new System.EventHandler(this.OnButtonMouseLeave);
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
             // sidebarPanel
             // 
@@ -227,7 +228,6 @@
             this.sidebarPanel.Controls.Add(this.outboundBtn);
             this.sidebarPanel.Controls.Add(this.damagesBtn);
             this.sidebarPanel.Controls.Add(this.inboundBtn);
-            this.sidebarPanel.Controls.Add(this.logoutBtn);
             this.sidebarPanel.Controls.Add(this.personalBtn);
             this.sidebarPanel.Controls.Add(this.bookingsBtn);
             this.sidebarPanel.Controls.Add(this.dashboardBtn);

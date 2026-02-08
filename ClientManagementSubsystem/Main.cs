@@ -91,6 +91,30 @@ namespace ClientManagementSubsystem
             activityLabel.Text = "Damages Report";
         }
 
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            ContextMenuStrip logoutMenu = new ContextMenuStrip();
+
+            ToolStripMenuItem logoutItem = new ToolStripMenuItem("Log out");
+            logoutItem.Image = Properties.Resources.LogoutIcon;
+            logoutItem.Click += LogoutItem_Click;
+            logoutMenu.Items.Add(logoutItem);
+            logoutMenu.Show(logoutBtn, new Point(0, logoutBtn.Height));
+        }
+
+        private void LogoutItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to log out and exit?",
+                                                  "Confirm Logout",
+                                                  MessageBoxButtons.YesNo,
+                                                  MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
         // Mouse Events
 
         private void OnButtonMouseEnter(object sender, EventArgs e)

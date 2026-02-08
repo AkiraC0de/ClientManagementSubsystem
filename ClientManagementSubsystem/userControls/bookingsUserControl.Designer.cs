@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.approvedSelected = new Guna.UI2.WinForms.Guna2Shapes();
-            this.pendingSelected = new Guna.UI2.WinForms.Guna2Shapes();
             this.innerHeaderPanel = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.pendingSelected = new Guna.UI2.WinForms.Guna2Shapes();
+            this.approvedSelected = new Guna.UI2.WinForms.Guna2Shapes();
             this.approvedBtn = new Guna.UI2.WinForms.Guna2Button();
             this.pendingBtn = new Guna.UI2.WinForms.Guna2Button();
             this.bookingsPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -54,25 +54,27 @@
             this.tableLayoutPanel.Size = new System.Drawing.Size(1622, 943);
             this.tableLayoutPanel.TabIndex = 0;
             // 
-            // approvedSelected
+            // innerHeaderPanel
             // 
-            this.approvedSelected.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
-            this.approvedSelected.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
-            this.approvedSelected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
-            this.approvedSelected.Location = new System.Drawing.Point(235, 105);
-            this.approvedSelected.Name = "approvedSelected";
-            this.approvedSelected.PolygonSkip = 1;
-            this.approvedSelected.Rotate = 0F;
-            this.approvedSelected.Shape = Guna.UI2.WinForms.Enums.ShapeType.Rectangle;
-            this.approvedSelected.Size = new System.Drawing.Size(215, 5);
-            this.approvedSelected.TabIndex = 3;
-            this.approvedSelected.Text = "guna2Shapes2";
-            this.approvedSelected.Zoom = 100;
+            this.innerHeaderPanel.BackColor = System.Drawing.Color.Transparent;
+            this.innerHeaderPanel.BorderRadius = 25;
+            this.innerHeaderPanel.Controls.Add(this.pendingSelected);
+            this.innerHeaderPanel.Controls.Add(this.approvedSelected);
+            this.innerHeaderPanel.Controls.Add(this.approvedBtn);
+            this.innerHeaderPanel.Controls.Add(this.pendingBtn);
+            this.innerHeaderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.innerHeaderPanel.FillColor = System.Drawing.Color.Transparent;
+            this.innerHeaderPanel.FillColor2 = System.Drawing.Color.Transparent;
+            this.innerHeaderPanel.Location = new System.Drawing.Point(3, 3);
+            this.innerHeaderPanel.Name = "innerHeaderPanel";
+            this.innerHeaderPanel.Size = new System.Drawing.Size(1616, 135);
+            this.innerHeaderPanel.TabIndex = 4;
+            this.innerHeaderPanel.UseTransparentBackground = true;
             // 
             // pendingSelected
             // 
-            this.pendingSelected.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
-            this.pendingSelected.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
+            this.pendingSelected.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(76)))), ((int)(((byte)(117)))));
+            this.pendingSelected.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(76)))), ((int)(((byte)(117)))));
             this.pendingSelected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
             this.pendingSelected.Location = new System.Drawing.Point(43, 105);
             this.pendingSelected.Margin = new System.Windows.Forms.Padding(0);
@@ -85,21 +87,20 @@
             this.pendingSelected.Text = "guna2Shapes1";
             this.pendingSelected.Zoom = 100;
             // 
-            // innerHeaderPanel
+            // approvedSelected
             // 
-            this.innerHeaderPanel.BackColor = System.Drawing.Color.Transparent;
-            this.innerHeaderPanel.BorderRadius = 25;
-            this.innerHeaderPanel.Controls.Add(this.pendingSelected);
-            this.innerHeaderPanel.Controls.Add(this.approvedSelected);
-            this.innerHeaderPanel.Controls.Add(this.approvedBtn);
-            this.innerHeaderPanel.Controls.Add(this.pendingBtn);
-            this.innerHeaderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.innerHeaderPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(102)))));
-            this.innerHeaderPanel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(94)))), ((int)(((byte)(98)))));
-            this.innerHeaderPanel.Location = new System.Drawing.Point(3, 3);
-            this.innerHeaderPanel.Name = "innerHeaderPanel";
-            this.innerHeaderPanel.Size = new System.Drawing.Size(1616, 135);
-            this.innerHeaderPanel.TabIndex = 4;
+            this.approvedSelected.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(76)))), ((int)(((byte)(117)))));
+            this.approvedSelected.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(76)))), ((int)(((byte)(117)))));
+            this.approvedSelected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
+            this.approvedSelected.Location = new System.Drawing.Point(235, 105);
+            this.approvedSelected.Name = "approvedSelected";
+            this.approvedSelected.PolygonSkip = 1;
+            this.approvedSelected.Rotate = 0F;
+            this.approvedSelected.Shape = Guna.UI2.WinForms.Enums.ShapeType.Rectangle;
+            this.approvedSelected.Size = new System.Drawing.Size(215, 5);
+            this.approvedSelected.TabIndex = 3;
+            this.approvedSelected.Text = "guna2Shapes2";
+            this.approvedSelected.Zoom = 100;
             // 
             // approvedBtn
             // 
@@ -111,11 +112,11 @@
             this.approvedBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.approvedBtn.FillColor = System.Drawing.Color.Transparent;
             this.approvedBtn.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.approvedBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
+            this.approvedBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(76)))), ((int)(((byte)(117)))));
             this.approvedBtn.HoverState.BorderColor = System.Drawing.Color.Transparent;
             this.approvedBtn.HoverState.CustomBorderColor = System.Drawing.Color.Transparent;
             this.approvedBtn.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.approvedBtn.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
+            this.approvedBtn.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(76)))), ((int)(((byte)(117)))));
             this.approvedBtn.Location = new System.Drawing.Point(235, 36);
             this.approvedBtn.Name = "approvedBtn";
             this.approvedBtn.PressedColor = System.Drawing.Color.Transparent;
@@ -135,11 +136,11 @@
             this.pendingBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.pendingBtn.FillColor = System.Drawing.Color.Transparent;
             this.pendingBtn.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pendingBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
+            this.pendingBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(76)))), ((int)(((byte)(117)))));
             this.pendingBtn.HoverState.BorderColor = System.Drawing.Color.Transparent;
             this.pendingBtn.HoverState.CustomBorderColor = System.Drawing.Color.Transparent;
             this.pendingBtn.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.pendingBtn.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
+            this.pendingBtn.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(76)))), ((int)(((byte)(117)))));
             this.pendingBtn.Location = new System.Drawing.Point(43, 36);
             this.pendingBtn.Name = "pendingBtn";
             this.pendingBtn.PressedColor = System.Drawing.Color.Transparent;
