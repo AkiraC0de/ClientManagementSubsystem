@@ -35,26 +35,57 @@ namespace ClientManagementSubsystem
 
         public void LoadBookings()
         {
-            bookingsPanel.Controls.Clear();
-            bookingsPanel.SuspendLayout();
+            bookingListPanel.Controls.Clear();
+            bookingListPanel.SuspendLayout();
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 12; i++)
             {
                 BookingCard card = new BookingCard();
 
-                card.VehicleName = "Toyota Vios " + i;
+                card.VehicleName = "Toyota Vios";
                 card.ClientName = "John Doe";
                 card.BookingID = i;
-
+                
                 card.OnSelect += (s, e) =>
                 {
                     MessageBox.Show($"You clicked booking #{card.BookingID}");
                  };
 
-                bookingsPanel.Controls.Add(card);
+                bookingListPanel.Controls.Add(card);
             }
 
-            bookingsPanel.ResumeLayout();
+            bookingListPanel.ResumeLayout();
+            CenterCards();
+        }
+
+        private void CenterCards()
+        {
+            if (bookingListPanel.Controls.Count == 0) return;
+
+            // Use the first control to get the base dimensions
+            Control firstCard = bookingListPanel.Controls[0];
+
+            // Total width one card occupies (Width + Left Margin + Right Margin)
+            int cardFullWidth = firstCard.Width + firstCard.Margin.Horizontal;
+
+            // Available width (ClientSize should exclude scrollbar width)
+            int availableWidth = bookingListPanel.ClientSize.Width - bookingListPanel.Padding.Horizontal;
+
+            // Calculate how many cards can fit
+            int cardsPerRow = availableWidth / cardFullWidth;
+
+            // Safety check: if panel is smaller than one card
+            if (cardsPerRow <= 0) cardsPerRow = 1;
+
+            // Total width of the "block" of cards
+            int totalContentWidth = cardsPerRow * cardFullWidth;
+
+            // Calculate the left padding needed to center that block
+            int lateralPadding = (bookingListPanel.ClientSize.Width - totalContentWidth) / 2;
+
+            // Apply the padding (keeping top/bottom as they were)
+            // We use Math.Max to ensure padding is never negative
+            bookingListPanel.Padding = new Padding(Math.Max(0, lateralPadding), bookingListPanel.Padding.Top, 0, 0);
         }
     }
 }

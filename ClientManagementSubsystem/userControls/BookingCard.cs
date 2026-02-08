@@ -12,28 +12,47 @@ namespace ClientManagementSubsystem.userControls
 {
     public partial class BookingCard : UserControl
     {
-        // 1. Create a custom event that the Main Form can listen to
         public event EventHandler OnSelect;
 
         public BookingCard()
         {
             InitializeComponent();
 
-            // 2. Wire up the click event for the card itself
-            this.Click += (s, e) => OnSelect?.Invoke(this, e);
+            this.Click += Card_Clicked;
 
-            // 3. IMPORTANT: Wire up the click for ALL child controls (labels, panels)
-            // so clicking the text also triggers the card selection.
-            foreach (Control c in this.Controls)
+            WireAllControls(this);
+        }
+
+        private void WireAllControls(Control parent)
+        {
+            foreach (Control c in parent.Controls)
             {
-                c.Click += (s, e) => OnSelect?.Invoke(this, e);
-                // If you have nested panels, you might need a recursive function here
+                c.Click += Card_Clicked;
+
+                if (c.HasChildren)
+                {
+                    WireAllControls(c);
+                }
             }
         }
 
-        // 4. Properties to easily set data from the loop
+        private void Card_Clicked(object sender, EventArgs e)
+        {
+            OnSelect?.Invoke(this, e);
+        }
+
         public string VehicleName { get { return lblVehicle.Text; } set { lblVehicle.Text = value; } }
         public string ClientName { get { return lblClient.Text; } set { lblClient.Text = value; } }
-        public int BookingID { get; set; } // Hidden ID for database logic
+        public int BookingID
+        {
+            get
+            {
+                return int.TryParse(lblBookingNum.Text, out int bookingID) ? bookingID : -1;
+            }
+            set
+            {
+                lblBookingNum.Text = value.ToString();
+            }
+        }
     }
 }
